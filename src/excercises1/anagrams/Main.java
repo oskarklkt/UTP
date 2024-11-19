@@ -4,7 +4,7 @@
  *
  */
 
-package UTP1.EX3;
+package excercises1.anagrams;
 
 import java.io.*;
 import java.util.*;

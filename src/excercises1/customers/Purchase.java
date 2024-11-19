@@ -4,7 +4,7 @@
  *
  */
 
-package UTP1.EX2;
+package excercises1.customers;
 
 
 import java.util.Objects;

@@ -4,7 +4,7 @@
  *
  */
 
-package UTP2.EX2;
+package excercises2.javaBean;
 
 
 import java.beans.PropertyVetoException;

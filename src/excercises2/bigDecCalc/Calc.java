@@ -4,7 +4,7 @@
  *
  */
 
-package UTP2.EX1;
+package excercises2.bigDecCalc;
 
 
 import java.math.BigDecimal;

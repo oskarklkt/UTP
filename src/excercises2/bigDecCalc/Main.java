@@ -4,7 +4,7 @@
  *
  */
 
-package UTP2.EX1;
+package excercises2.bigDecCalc;
 
 
 public class Main {

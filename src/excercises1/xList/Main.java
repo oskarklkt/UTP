@@ -4,7 +4,7 @@
  *
  */
 
-package UTP1.EX1;
+package excercises1.xList;
 
 
 import java.util.*;
