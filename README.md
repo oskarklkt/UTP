@@ -10,3 +10,9 @@
 ### Zestaw 2
 - BigDecCalc
 - JavaBean
+
+### Zestaw 3
+- String Task
+- Task List
+- Letters Threads
+- Blocking Queues
