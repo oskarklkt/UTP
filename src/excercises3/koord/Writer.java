@@ -13,12 +13,12 @@ public class Writer implements Runnable {
     public void run() {
         try {
             String text = blockingQueue.take();
-            while (!text.equals("null")) {
-                System.out.println("-> " + text);
+            while (!"null".equals(text)) {
+                System.out.println(text);
                 text = blockingQueue.take();
             }
         } catch (InterruptedException e) {
-            e.getCause();
+            Thread.currentThread().interrupt();
         }
     }
 }

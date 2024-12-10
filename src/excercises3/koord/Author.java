@@ -15,13 +15,14 @@ public class Author implements Runnable {
     @Override
     public void run() {
         int i = 0;
-        while (i < texts.length) {
-            try {
+        try {
+            while (i < texts.length) {
                 blockingQueue.put(texts[i++]);
                 Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.getCause();
             }
+            blockingQueue.put("null");
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 

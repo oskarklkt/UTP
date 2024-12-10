@@ -4,8 +4,8 @@ public class StringTask implements Runnable {
     private final String word;
     private String result = "";
     private final int repetitions;
-    private TaskState state;
-    private boolean done;
+    private volatile TaskState state;
+    private volatile boolean done;
     private Thread thread;
 
     public StringTask(String word, int repetitions) {
@@ -19,7 +19,7 @@ public class StringTask implements Runnable {
     public void run() {
         try {
             for (int i = 0; i < repetitions; i++) {
-                if (done) {
+                if (Thread.interrupted()) {
                     state = TaskState.ABORTED;
                     return;
                 }
@@ -43,8 +43,8 @@ public class StringTask implements Runnable {
     public void abort() {
         done = true;
         if (thread != null) {
-            state = TaskState.ABORTED;
             thread.interrupt();
+            state = TaskState.ABORTED;
         }
     }
 
